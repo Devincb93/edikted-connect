@@ -2,7 +2,7 @@ import React from 'react'
 
 function ChannelContainer() {
     return (
-        <div>
+        <div className='bg-slate-200'>
             ChannelContainer
         </div>
     )
