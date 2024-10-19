@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { StreamChat } from 'stream-chat'
+import { Chat } from 'stream-chat-react'
+import Cookies from 'universal-cookie'
+
+import { ChannelListContainer, ChannelContainer} from './components'
+
+
+const apiKey = 'fv67b56kqtkn'
+const client = StreamChat.getInstance(apiKey)
+
 
 function App() {
-  
-
   return (
-    <div>
-      <h1>Edikted Connect</h1>
+    <div className='app-wrapper'>
+      <Chat client={client} theme='team light'>
+        <ChannelListContainer/>
+        <ChannelContainer/>
+      </Chat>
     </div>
   )
 }
